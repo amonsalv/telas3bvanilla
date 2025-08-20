@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telas 3B - Tareas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">Telas 3B</div>
+      <nav>
+        <ul>
+          <li class="active">Tareas</li>
+          <li>Inventario</li>
+          <li>Operarios</li>
+        </ul>
+      </nav>
+      <div class="sidebar-bottom">
+        <ul>
+          <li>Usuarios</li>
+          <li>Configuración</li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-content">
+      <div class="topbar-breadcrumb">
+        <div class="topbar-avatar">A</div>
+        <span class="topbar-breadcrumb-text">Tareas</span>
+      </div>
+      <div class="tasks-section">
+        <div class="header">
+          <span class="breadcrumb">Tareas</span>
+          <div class="header-actions">
+            <button class="btn">Nueva Orden</button>
+            <button class="btn">Nueva Tarea</button>
+          </div>
+        </div>
+        <div class="tabs">
+          <button class="tab active" data-tab="total">Total de tareas</button>
+          <button class="tab" data-tab="pendientes">Tareas Pendientes</button>
+          <button class="tab" data-tab="aprobadas">Tareas Aprobadas</button>
+          <button class="tab" data-tab="completadas">Tareas Completadas</button>
+          <button class="tab" data-tab="canceladas">Tareas Canceladas</button>
+        </div>
+        <div class="filters">
+          <select id="date-filter">
+            <option>Últimos 30 días</option>
+            <option>Últimos 7 días</option>
+            <option>Este mes</option>
+          </select>
+          <select id="state-filter">
+            <option>Filtrar por</option>
+            <option>En Proceso</option>
+            <option>Pendiente</option>
+            <option>Sin Iniciar</option>
+          </select>
+        </div>
+        <table class="tasks-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Tarea a ejecutar</th>
+              <th>Estado</th>
+              <th>Order ID</th>
+              <th>Fecha</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tasks-body">
+            <!-- JS insertará las filas aquí -->
+          </tbody>
+        </table>
+        <div class="pagination">
+          <span
+            >Página <span id="page-num">1</span> de
+            <span id="page-total">4</span></span
+          >
+          <button id="prev-page">&#60;</button>
+          <button id="next-page">&#62;</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
