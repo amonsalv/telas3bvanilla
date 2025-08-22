@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telas 3B - Creación de Tarea</title>
+    <link rel="stylesheet" href="style/styles.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo">Telas 3B</div>
+      <nav>
+        <ul>
+          <li class="active">Tareas</li>
+          <li>Inventario</li>
+          <li>Operarios</li>
+        </ul>
+      </nav>
+      <div class="sidebar-bottom">
+        <ul>
+          <li>Usuarios</li>
+          <li>Configuración</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Contenido principal -->
+    <div class="main-content">
+      <!-- Barra superior tipo breadcrumb -->
+      <div class="topbar-breadcrumb">
+        <div class="topbar-avatar">A</div>
+        <span class="topbar-breadcrumb-text">Tareas &gt; Creacion De Tareas</span>
+      </div>
+      <!-- Sección principal -->
+      <div class="tasks-section">
+        <div class="header">
+          <span class="breadcrumb">Creación de Tarea</span>
+          <div class="header-actions">
+            <button class="btn">Nueva Tarea</button>
+            <button class="btn">Crear Tarea &gt;</button>
+          </div>
+        </div>
+        <div style="border-bottom:1px solid #ececec; margin-bottom:24px;">
+          <button class="tab active">Resumen</button>
+        </div>
+        <!-- Formulario de tarea -->
+        <!--
+          Cambios realizados:
+          - Se reorganizó el formulario en filas de dos columnas para alinear los campos relacionados.
+          - 'Tipo de tarea', 'Color de tela', 'Tipo de tela' y 'Asignar a' son ahora dropdowns.
+          - 'Metros de tela a cortar' es un input numérico.
+          - 'Project' es un input solo lectura con valor aleatorio.
+          - El título superior se actualiza dinámicamente según los valores seleccionados en los dropdowns.
+          - Se unificó la altura y el estilo de los inputs y selects para mantener la alineación visual.
+        -->
+        <div style="margin-bottom:32px;">
+          <h3 id="resumen-tarea" style="margin-top:0;">Corte de tela rosada</h3>
+          <div style="display:flex; gap:32px;">
+            <div style="flex:1; margin-bottom:18px;">
+              <label style="font-size:0.95em; color:#888;" for="tipo-tarea">Tipo de tarea*</label>
+              <select id="tipo-tarea" name="tipo-tarea" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
+                <option value="corte">Corte</option>
+                <option value="estampado">Estampado</option>
+                <option value="confeccion">Confección</option>
+                <option value="despacho">Despacho</option>
+              </select>
+              <div style="font-size:0.85em; color:#bbb;">Item a la tarea/fabricación/etapa</div>
+            </div>
+            <div style="flex:1; margin-bottom:18px;">
+              <label style="font-size:0.95em; color:#888;" for="project">Project</label>
+              <input id="project" name="project" type="text" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd; margin-bottom:18px; height:40px; box-sizing:border-box;" readonly />
+            </div>
+          </div>
+          <div style="display:flex; gap:32px;">
+            <div style="flex:1; margin-bottom:18px;">
+              <label style="font-size:0.95em; color:#888;" for="color-tela">Color de tela</label>
+              <select id="color-tela" name="color-tela" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
+                <option value="rosada">Rosada</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="blanca">Blanca</option>
+                <option value="negra">Negra</option>
+              </select>
+            </div>
+            <div style="flex:1; margin-bottom:18px;">
+              <label style="font-size:0.95em; color:#888;" for="metros-corte">Metros de tela a cortar*</label>
+              <input id="metros-corte" name="metros-corte" type="number" min="1" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd; margin-bottom:6px; height:40px; box-sizing:border-box;" value="100" />
+              <div style="font-size:0.85em; color:#bbb;">Cantidad de artículo a cortar en esta tarea/fabricación</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:32px;">
+            <div style="flex:1;">
+              <label style="font-size:0.95em; color:#888;" for="tipo-tela">Tipo de tela</label>
+              <select id="tipo-tela" name="tipo-tela" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
+                <option value="nos">Nos</option>
+                <option value="algodon">Algodón</option>
+                <option value="poliester">Poliéster</option>
+                <option value="mezcla">Mezcla</option>
+                <option value="lino">Lino</option>
+              </select>
+            </div>
+            <div style="flex:1;">
+              <label style="font-size:0.95em; color:#888;" for="asignar-a">Asignar a:</label>
+              <select id="asignar-a" name="asignar-a" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
+                <option value="operario1">Operario 1</option>
+                <option value="operario2">Operario 2</option>
+                <option value="operario3">Operario 3</option>
+                <option value="operario4">Operario 4</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <!-- Inventario de telas -->
+        <div style="margin-bottom:24px;">
+          <div style="font-weight:500; margin-bottom:8px;">Inventario de telas</div>
+          <table class="tasks-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>No.</th>
+                <th>Nombre Del Producto (SKU) *</th>
+                <th>Metros *</th>
+                <th>Cantidad Cortada (MTS)*</th>
+                <th>Metros Totales(MTS) *</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Tela Rosada</td>
+                <td>2000</td>
+                <td>500</td>
+                <td>1500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Inventario Producto -->
+        <div>
+          <div style="font-weight:500; margin-bottom:8px;">Inventario Producto</div>
+          <table class="tasks-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>No.</th>
+                <th>Nombre Artículo *</th>
+                <th>Código Artículo *</th>
+                <th>Cantidad *</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>1</td>
+                <td>Uniforme Mujer Rosada</td>
+                <td>9B7KHD</td>
+                <td>100</td>
+                <td>...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--
+      Script para:
+      - Generar el número aleatorio del Project.
+      - Actualizar el resumen dinámico del título según los dropdowns.
+      - Mantener la alineación visual de los campos.
+    -->
+    <script>
+      // Generar número aleatorio para el project
+      const rand = Math.floor(Math.random() * 900 + 100);
+      document.getElementById('project').value = 'PROJ-' + rand;
+
+      // Función para actualizar el resumen
+      function actualizarResumen() {
+        const tarea = document.getElementById('tipo-tarea');
+        const color = document.getElementById('color-tela');
+        const resumen = document.getElementById('resumen-tarea');
+        resumen.textContent = tarea.options[tarea.selectedIndex].text + ' de tela ' + color.options[color.selectedIndex].text.toLowerCase();
+      }
+      document.getElementById('tipo-tarea').addEventListener('change', actualizarResumen);
+      document.getElementById('color-tela').addEventListener('change', actualizarResumen);
+      // Inicializar resumen al cargar
+      actualizarResumen();
+    </script>
+  </body>
+</html>

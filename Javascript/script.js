@@ -3,7 +3,7 @@
 // Lógica de la tabla de tareas
 // ===============================
 
-// Lista de tareas de ejemplo
+// Lista de tareas demo (siempre igual para la demo)
 const tasks = [
   { name: 'Corte tela blanca', state: 'En Proceso', order: '0957746KJLY', date: '24.12.2020', time: '11:16 AM' },
   { name: 'Confeccion Tela azul', state: 'Pendiente', order: '0957746KJLY', date: '24.12.2020', time: '11:16 AM' },

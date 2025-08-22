@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Telas 3B - Tareas</title>
-    <!--
-      Archivo de estilos principal
-      Contiene los estilos para el layout, componentes y responsividad
-    -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style/styles.css" />
   </head>
   <body>
     <!--
@@ -19,7 +15,8 @@
       <div class="logo">Telas 3B</div>
       <nav>
         <ul>
-          <li class="active">Tareas</li> <!-- Sección actual -->
+          <li class="active">Tareas</li>
+          <!-- Sección actual -->
           <li>Inventario</li>
           <li>Operarios</li>
         </ul>
@@ -53,7 +50,7 @@
           <span class="breadcrumb">Tareas</span>
           <div class="header-actions">
             <button class="btn">Nueva Orden</button>
-            <button class="btn">Nueva Tarea</button>
+            <button class="btn" onclick="window.location.href='creartarea.html'">Nueva Tarea</button>
           </div>
         </div>
         <!-- Tabs para filtrar las tareas por estado -->
@@ -109,6 +106,6 @@
       Archivo de JavaScript principal
       Controla la lógica de la tabla, paginación y tabs
     -->
-    <script src="script.js"></script>
+    <script src="Javascript/script.js"></script>
   </body>
 </html>
