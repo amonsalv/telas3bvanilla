@@ -1,3 +1,9 @@
+
+// ===============================
+// Lógica de la tabla de tareas
+// ===============================
+
+// Lista de tareas de ejemplo
 const tasks = [
   { name: 'Corte tela blanca', state: 'En Proceso', order: '0957746KJLY', date: '24.12.2020', time: '11:16 AM' },
   { name: 'Confeccion Tela azul', state: 'Pendiente', order: '0957746KJLY', date: '24.12.2020', time: '11:16 AM' },
@@ -8,15 +14,18 @@ const tasks = [
   { name: 'Corte tela verde', state: 'En Proceso', order: '0957746KJLY', date: '24.12.2020', time: '11:16 AM' },
 ];
 
+// Relación entre el estado y la clase CSS del badge
 const stateClass = {
   'En Proceso': 'badge-proceso',
   'Pendiente': 'badge-pendiente',
   'Sin Iniciar': 'badge-iniciar',
 };
 
+// Número de filas por página
 const rowsPerPage = 5;
 let currentPage = 1;
 
+// Función para renderizar la tabla de tareas según la página actual
 function renderTable() {
   const tbody = document.getElementById('tasks-body');
   tbody.innerHTML = '';
@@ -35,16 +44,20 @@ function renderTable() {
     `;
     tbody.appendChild(tr);
   });
+  // Actualiza la paginación
   document.getElementById('page-num').textContent = currentPage;
   document.getElementById('page-total').textContent = Math.ceil(tasks.length / rowsPerPage);
 }
 
+// Evento para ir a la página anterior
 document.getElementById('prev-page').onclick = function() {
   if (currentPage > 1) {
     currentPage--;
     renderTable();
   }
 };
+
+// Evento para ir a la página siguiente
 document.getElementById('next-page').onclick = function() {
   if (currentPage < Math.ceil(tasks.length / rowsPerPage)) {
     currentPage++;
@@ -52,13 +65,15 @@ document.getElementById('next-page').onclick = function() {
   }
 };
 
+// Evento para cambiar de tab (filtro por estado)
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', function() {
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
     this.classList.add('active');
-    // Aquí puedes filtrar las tareas según el tab
-    // Por ahora solo cambia el tab activo
+    // Aquí puedes filtrar las tareas según el tab seleccionado
+    // Por ahora solo cambia el tab activo visualmente
   });
 });
 
+// Renderiza la tabla al cargar la página
 renderTable();

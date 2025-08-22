@@ -4,14 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Telas 3B - Tareas</title>
+    <!--
+      Archivo de estilos principal
+      Contiene los estilos para el layout, componentes y responsividad
+    -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!--
+      Sidebar (menú lateral)
+      Contiene la navegación principal de la aplicación
+    -->
     <div class="sidebar">
       <div class="logo">Telas 3B</div>
       <nav>
         <ul>
-          <li class="active">Tareas</li>
+          <li class="active">Tareas</li> <!-- Sección actual -->
           <li>Inventario</li>
           <li>Operarios</li>
         </ul>
@@ -23,12 +31,24 @@
         </ul>
       </div>
     </div>
+    <!--
+      Contenido principal de la página
+    -->
     <div class="main-content">
+      <!--
+        Barra superior tipo breadcrumb con avatar
+        Simula la navegación y el usuario actual
+      -->
       <div class="topbar-breadcrumb">
         <div class="topbar-avatar">A</div>
         <span class="topbar-breadcrumb-text">Tareas</span>
       </div>
+      <!--
+        Sección principal de tareas
+        Incluye cabecera, tabs, filtros y tabla de tareas
+      -->
       <div class="tasks-section">
+        <!-- Cabecera de la sección con título y botones de acción -->
         <div class="header">
           <span class="breadcrumb">Tareas</span>
           <div class="header-actions">
@@ -36,6 +56,7 @@
             <button class="btn">Nueva Tarea</button>
           </div>
         </div>
+        <!-- Tabs para filtrar las tareas por estado -->
         <div class="tabs">
           <button class="tab active" data-tab="total">Total de tareas</button>
           <button class="tab" data-tab="pendientes">Tareas Pendientes</button>
@@ -43,6 +64,7 @@
           <button class="tab" data-tab="completadas">Tareas Completadas</button>
           <button class="tab" data-tab="canceladas">Tareas Canceladas</button>
         </div>
+        <!-- Filtros adicionales -->
         <div class="filters">
           <select id="date-filter">
             <option>Últimos 30 días</option>
@@ -56,6 +78,7 @@
             <option>Sin Iniciar</option>
           </select>
         </div>
+        <!-- Tabla de tareas -->
         <table class="tasks-table">
           <thead>
             <tr>
@@ -68,19 +91,24 @@
             </tr>
           </thead>
           <tbody id="tasks-body">
-            <!-- JS insertará las filas aquí -->
+            <!-- Las filas se generan dinámicamente con JavaScript -->
           </tbody>
         </table>
+        <!-- Paginación de la tabla -->
         <div class="pagination">
-          <span
-            >Página <span id="page-num">1</span> de
-            <span id="page-total">4</span></span
-          >
+          <span>
+            Página <span id="page-num">1</span> de
+            <span id="page-total">4</span>
+          </span>
           <button id="prev-page">&#60;</button>
           <button id="next-page">&#62;</button>
         </div>
       </div>
     </div>
+    <!--
+      Archivo de JavaScript principal
+      Controla la lógica de la tabla, paginación y tabs
+    -->
     <script src="script.js"></script>
   </body>
 </html>
