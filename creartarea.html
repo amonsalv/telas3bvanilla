@@ -59,6 +59,7 @@
             <div style="flex:1; margin-bottom:18px;">
               <label style="font-size:0.95em; color:#888;" for="tipo-tarea">Tipo de tarea*</label>
               <select id="tipo-tarea" name="tipo-tarea" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
+                <option value="" selected disabled>Seleccione un tipo de tarea</option>
                 <option value="corte">Corte</option>
                 <option value="estampado">Estampado</option>
                 <option value="confeccion">Confección</option>
@@ -75,6 +76,7 @@
             <div style="flex:1; margin-bottom:18px;">
               <label style="font-size:0.95em; color:#888;" for="color-tela">Color de tela</label>
               <select id="color-tela" name="color-tela" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
+                <option value="" selected disabled>Seleccione un color</option>
                 <option value="rosada">Rosada</option>
                 <option value="azul">Azul</option>
                 <option value="verde">Verde</option>
@@ -84,7 +86,7 @@
             </div>
             <div style="flex:1; margin-bottom:18px;">
               <label style="font-size:0.95em; color:#888;" for="metros-corte">Metros de tela a cortar*</label>
-              <input id="metros-corte" name="metros-corte" type="number" min="1" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd; margin-bottom:6px; height:40px; box-sizing:border-box;" value="100" />
+              <input id="metros-corte" name="metros-corte" type="number" min="1" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd; margin-bottom:6px; height:40px; box-sizing:border-box;" value="000" />
               <div style="font-size:0.85em; color:#bbb;">Cantidad de artículo a cortar en esta tarea/fabricación</div>
             </div>
           </div>
@@ -92,7 +94,7 @@
             <div style="flex:1;">
               <label style="font-size:0.95em; color:#888;" for="tipo-tela">Tipo de tela</label>
               <select id="tipo-tela" name="tipo-tela" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
-                <option value="nos">Nos</option>
+                <option value="" selected disabled>Seleccione un tipo de tela</option>
                 <option value="algodon">Algodón</option>
                 <option value="poliester">Poliéster</option>
                 <option value="mezcla">Mezcla</option>
@@ -102,6 +104,7 @@
             <div style="flex:1;">
               <label style="font-size:0.95em; color:#888;" for="asignar-a">Asignar a:</label>
               <select id="asignar-a" name="asignar-a" style="width:100%; padding:8px 12px; border-radius:6px; background:#f7f9fb; border:1px solid #ddd;">
+                <option value="" selected disabled>Seleccione un operario</option>
                 <option value="operario1">Operario 1</option>
                 <option value="operario2">Operario 2</option>
                 <option value="operario3">Operario 3</option>
