@@ -1,5 +1,7 @@
 # Telas 3B - Demo de Gestión de Tareas (SENA)
 
+🌐 **Sitio web en línea:** https://amonsalv.github.io/telas3bvanilla/
+
 Este proyecto es una demostración desarrollada para el SENA, orientada a la gestión de tareas en un entorno de manufactura textil. La aplicación simula el flujo de trabajo de una empresa ficticia llamada "Telas 3B" y permite visualizar y crear tareas relacionadas con la producción y administración de telas y uniformes.
 
 ## Objetivo
@@ -8,7 +10,7 @@ El objetivo de este demo es mostrar una interfaz moderna y funcional para la ges
 
 ## Estructura de la aplicación
 
-- **tareasadministrador.html**: Página principal de administración de tareas. Permite visualizar una tabla con tareas de ejemplo, filtrar por estado, navegar entre páginas y ver detalles básicos de cada tarea. Incluye filtros y tabs para simular la gestión real de tareas.
+- **index.html**: Página principal de administración de tareas. Permite visualizar una tabla con tareas de ejemplo, filtrar por estado, navegar entre páginas y ver detalles básicos de cada tarea. Incluye filtros y tabs para simular la gestión real de tareas.
 
 - **creartarea.html**: Formulario para la creación de nuevas tareas. Permite seleccionar tipo de tarea, color y tipo de tela, metros a cortar y asignar un operario. El campo "Project" se genera automáticamente. El formulario es solo visual y no guarda datos, ya que es una demo.
 
@@ -18,9 +20,14 @@ El objetivo de este demo es mostrar una interfaz moderna y funcional para la ges
 
 ## Uso
 
-1. Abre `tareasadministrador.html` para ver la tabla de tareas demo, navegar entre tabs y páginas, y explorar los filtros.
-2. Abre `creartarea.html` para ver el formulario de creación de tareas y probar la selección de opciones. El título del formulario se actualiza dinámicamente según los valores elegidos.
-3. No es necesario un servidor ni base de datos; todo funciona de manera local y visual.
+### Opción 1: Acceso directo en línea
+Visita **https://amonsalv.github.io/telas3bvanilla/** para usar la aplicación directamente desde tu navegador web.
+
+### Opción 2: Uso local
+1. Clona este repositorio
+2. Abre `index.html` para ver la tabla de tareas demo, navegar entre tabs y páginas, y explorar los filtros.
+3. Abre `creartarea.html` para ver el formulario de creación de tareas y probar la selección de opciones. El título del formulario se actualiza dinámicamente según los valores elegidos.
+4. No es necesario un servidor ni base de datos; todo funciona de manera local y visual.
 
 ## Público objetivo
 
@@ -52,7 +59,7 @@ Este proyecto es una interfaz web de administración de tareas para Telas 3B, de
 
 ## Estructura del proyecto
 
-- `tareasadministrador.html`: Página principal con la estructura de la interfaz.
+- `index.html`: Página principal con la estructura de la interfaz.
 - `styles.css`: Estilos para el layout, componentes y responsividad.
 - `script.js`: Lógica para la tabla de tareas, paginación y tabs.
 
@@ -69,7 +76,7 @@ Cada archivo contiene comentarios explicativos en español para facilitar la com
 ## Cómo usar
 
 1. Clona este repositorio.
-2. Abre `tareasadministrador.html` en tu navegador.
+2. Abre `index.html` en tu navegador.
 3. Modifica los archivos según tus necesidades.
 
 ---
